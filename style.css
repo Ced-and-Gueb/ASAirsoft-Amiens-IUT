@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+
+:root {
+    --accent-color: #ff0000;
+    --secondary-color: #000000;
+    --text-color: #ffffff;
+    --bg-color-light: #1c375a;
+    --bg-color-dark: #194c7c;
+
+    --fs-small: 0.75rem;
+    --fs-regular: 1rem;
+    --fs-larger-regular: 1.2rem;
+    --fs-medium: 1.5rem;
+    --fs-big: 2rem;
+    --fs-bigger: 4rem;
+    
+    --ff-BO1: 'Black Ops One', cursive;
+}
+
+html.a-js body {
+    margin: 0!important;
+}
+
+h1, h2, h3 {
+    color: red;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: var(--accent-color);
+}
+
+body {
+    margin: 0;
+    color: var(--text-color);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+button {
+    text-decoration: none;
+    border: none;
+    background-color: var(--accent-color);
+    width: 6em;
+    height: 2em;
+    border-radius: 0.5em;
+    color: var(--text-color);
+}
+
+header {
+    padding-left: 2em;
+    padding-right: 2em;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--fs-medium);
+    height: 4em;
+}
+
+header > nav {
+    display: flex;
+    gap: var(--fs-medium);
+}
+
+header > div {
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex: auto;
+    flex-direction: column;}
+
+main .next-events {
+    width: 100%;
+    margin-bottom: 3em;
+    align-items: center;
+}
+
+main .presentation {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+}
+
+.container {
+    background-color: var(--bg-color-dark);
+    padding: 1em;
+}
+
+main .presentation .container {
+    margin: 1em;
+    /* height: 15em;
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
+    clip-path: polygon(0 0, 74% 0, 100% 22%, 100% 100%, 25% 100%, 0 75%); 
+    width: 30em; */
+    min-height: 8em;
+}
+
+main .presentation .container > h1 { 
+    text-align: center;
+    font-size: var(--fs-big);
+    color: red;
+    font-weight: bold;
+}
+
+.tile-container {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: var(--fs-small);
+}
+
+.tile-container > img {
+    height: 100%; 
+    object-fit: contain;
+}
+
+.tile {
+    background-color: var(--bg-color-light);
+    position: relative;
+    transform: translateY(2em);
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0;
+    margin: 0;
+    width: 25%;
+}
+
+.tile .description {
+    padding: 1em;
+}
+
+.tile .description h2 {
+    font-size: var(--fs-big);
+}
+
+.next-events h1 {
+    transform: translateY(1em);
+    font-size: var(--fs-bigger);
+    font-weight: bold;
+    padding-left: 2em;
+    font-family: var(--ff-BO1);
+    margin: 0.3em;
+}
+
+.past-events-container {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.ranch-presentation {
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5em;
+    margin-left: 0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.ranch-description {
+    width: 40%;
+}
+
+.ranch-presentation:nth-child(even){
+    flex-direction: row-reverse;
+    margin-right: 0;
+    margin-left: 5em;
+}
+
+.ranch-presentation img {
+    width: 30em;
+}
+
+footer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    background-color: var(--secondary-color);
+    flex: inherit;
+    justify-content: space-around;
+    font-size: var(--fs-larger-regular);
+}
+
+footer div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer > h3 {
+    color: var(--bg-color-light);
+}
+
+@media screen and (max-width: 748px) {
+    button {
+        width: 8em;
+        height: 3em;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        font-size: var(--fs-regular);
+        height: fit-content;
+        padding-left: 0.2em;
+        padding-right: 0.2em;
+    }
+    main .presentation {
+        display: flex;
+        flex: auto;
+        flex-direction: column;
+    }
+    header > nav {
+        display: flex;
+        font-size: var(--fs-regular);
+        padding: 1em;
+    }
+    main .presentation .container {
+        max-width: 100%;
+    }
+    /* header nav {
+        display: flex;
+        flex-direction: column;
+        gap: var(--fs-medium);
+    } */
+    footer {
+        font-size: var(--fs-small);
+        align-items: center;
+        display: flex;
+        flex: auto;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    footer > div {
+        padding-top: 0.5em;
+        text-align: center;
+    }
+    .tile-container {
+        flex-direction: column;
+    }
+    
+    .past-events-container {
+        padding: 1em;
+        gap: var(--fs-big);
+    }
+    .tile {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .next-events h1 {
+        font-size: var(--fs-bigger);
+        font-family: var(--ff-BO1);
+        padding-left: 0.5em;
+    }
+    .past-events-container {
+        flex-direction: column;
+    }
+    .ranch-presentation {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 1em;
+    }
+    .ranch-presentation:nth-child(even){
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    .ranch-description {
+        width: auto;
+    }
+    .ranch-presentation img {
+        width: 100%;
+    }
+}
