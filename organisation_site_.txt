@@ -1,0 +1,26 @@
+Un site est partagée en plusieurs pages.
+Certaines de ces pages reviennent : home page, account page (quand il y a un compte)
+chaque page est partagée en 3 partie : header, body, footer
+
+Header : comprend la navbar (un menu qui permet d'accéder aux parties différentes et principales du site), le logo et le titre du site ainsi que la possibilité de sign up/in
+Body : contient le contenu du site.
+
+Le body est partagé en components, div et secion chaque partie comportant un titre de cette partie, des liens, du texte, des images etc.
+Le plus important est en haut du site (top ventes sur Amazon, le calendrier sur Parcoursup etc.)
+Footer : contient les informations légales et des liens pour rediriger l'utilisateur qui a scrollé tout en bas.
+
+Ergonomie : les sites ont en générale une palette de 3 couleurs principales
+-> 2 couleurs qui se combinent et s'intervertissent, ils doivent être différenciable à la lecture de façon claire, tout en étant sobre 
+(généralement une combinaison de couleur sombre avec des tons de blancs) 
+-> une 3e couleur au moins pour marquer un point fort (un bouton en rouge)
+
+Charte graphique : donne les infos de comment le site est géré de manière graphique (les couleurs, les liens, les images et leur tailles, le style d'écriture et son font-size etc...)
+
+Responsiveness : les sites sont en général résponsive dans le contexte où tout le monde utilise un tél.
+La Responsiveness amène à une verticalité du site au lieu de son horizontalité (les navbar sont de bas en haut etc...). La taille d'écriture est adaptée.
+
+// Idée du SITE 
+Nom du site : 
+But : site pour s'engager dans l'espace
+Public visée : 
+Charte graphique : 

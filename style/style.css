@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
 :root {
     --accent-color: #ff0000;
@@ -8,11 +8,11 @@
     --bg-color-light: #1c375a;
     --bg-color-dark: #194c7c;
 
-    --fs-small: 0.75rem;
-    --fs-regular: 1rem;
-    --fs-larger-regular: 1.2rem;
-    --fs-medium: 1.5rem;
-    --fs-big: 2rem;
+    --fs-smallest: 1rem;
+    --fs-small-medium: 1.25rem;
+    --fs-small: 1.5rem;
+    --fs-medium: 2rem;
+    --fs-big: 3rem;
     --fs-bigger: 4rem;
     
     --ff-BO1: 'Black Ops One', cursive;
@@ -24,6 +24,10 @@ html.a-js body {
 
 h1, h2, h3 {
     color: red;
+}
+
+p {
+    font-size: var(--fs-small);
 }
 
 a {
@@ -47,10 +51,11 @@ button {
     text-decoration: none;
     border: none;
     background-color: var(--accent-color);
-    width: 6em;
+    width: 10em;
     height: 2em;
     border-radius: 0.5em;
     color: var(--text-color);
+    font-size: var(--fs-small-medium);
 }
 
 header {
@@ -74,10 +79,10 @@ header > div {
 }
 
 main {
-    flex: 1;
     display: flex;
     flex: auto;
-    flex-direction: column;}
+    flex-direction: column;
+}
 
 main .next-events {
     width: 100%;
@@ -89,6 +94,7 @@ main .presentation {
     display: flex;
     flex: auto;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .container {
@@ -98,16 +104,13 @@ main .presentation {
 
 main .presentation .container {
     margin: 1em;
-    /* height: 15em;
-    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 25%, 75% 0);
-    clip-path: polygon(0 0, 74% 0, 100% 22%, 100% 100%, 25% 100%, 0 75%); 
-    width: 30em; */
     min-height: 8em;
+    width: 45%;
 }
 
 main .presentation .container > h1 { 
     text-align: center;
-    font-size: var(--fs-big);
+    font-size: var(--fs-medium);
     color: red;
     font-weight: bold;
 }
@@ -117,12 +120,7 @@ main .presentation .container > h1 {
     flex: auto;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: var(--fs-small);
-}
-
-.tile-container > img {
-    height: 100%; 
-    object-fit: contain;
+    gap: var(--fs-smallest);
 }
 
 .tile {
@@ -131,20 +129,38 @@ main .presentation .container > h1 {
     transform: translateY(2em);
     display: flex;
     flex-direction: column;
-    padding: 1em;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 5%;
     padding: 0;
     margin: 0;
-    width: 25%;
+    width: 28%;
+}
+
+.tile-image-div {
+    height: 70%;
+    width: 100%;
+    
+}
+
+.tile img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
 }
 
 .tile .description {
     padding: 1em;
+    height: 20%;
 }
 
 .tile .description h2 {
-    font-size: var(--fs-big);
+    font-size: var(--fs-medium);
+}
+
+.tile > button {
+    height: 2.5em;
+    margin: var(--fs-small);
 }
 
 .next-events h1 {
@@ -177,7 +193,18 @@ main .presentation .container > h1 {
 }
 
 .ranch-description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: var(--fs-small);
     width: 40%;
+}
+
+.ranch-description h3 {
+    font-size: var(--fs-small);
+}
+
+.ranch-description h1 {
+    font-size: var(--fs-medium);
+    font-family: var(--ff-BO1);
 }
 
 .ranch-presentation:nth-child(even){
@@ -190,6 +217,59 @@ main .presentation .container > h1 {
     width: 30em;
 }
 
+.about {
+    padding: 0em 1em 0em 1em; /* top right bottom left */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .about-text-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.about .image {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact {
+    align-items: center;
+    display: flex;
+    flex: auto;
+    flex-direction: row;
+    width: 100%;
+}
+
+.contact img {
+    height: 50%;
+    width: 50%;
+}
+
+.contact form {
+    height: auto;
+    width: 20%;
+    padding: 2em 5em 2em 5em;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color-dark);
+}
+
+form div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: right;
+    justify-content: space-between;
+}
+
+form div > h6 {
+    font-size: var(--fs-small-medium);
+    padding-right: 1em;
+}
+
 footer {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -197,7 +277,7 @@ footer {
     background-color: var(--secondary-color);
     flex: inherit;
     justify-content: space-around;
-    font-size: var(--fs-larger-regular);
+    font-size: var(--fs-smallest);
 }
 
 footer div > div {
@@ -217,31 +297,26 @@ footer > h3 {
     header {
         display: flex;
         flex-direction: column;
-        font-size: var(--fs-regular);
+        font-size: var(--fs-small-medium);
         height: fit-content;
         padding-left: 0.2em;
         padding-right: 0.2em;
+    }
+    header > nav {
+        display: flex;
+        font-size: var(--fs-small-medium);
+        padding: 1em;
     }
     main .presentation {
         display: flex;
         flex: auto;
         flex-direction: column;
     }
-    header > nav {
-        display: flex;
-        font-size: var(--fs-regular);
-        padding: 1em;
-    }
     main .presentation .container {
         max-width: 100%;
     }
-    /* header nav {
-        display: flex;
-        flex-direction: column;
-        gap: var(--fs-medium);
-    } */
     footer {
-        font-size: var(--fs-small);
+        font-size: var(--fs-smallest);
         align-items: center;
         display: flex;
         flex: auto;
@@ -289,5 +364,22 @@ footer > h3 {
     }
     .ranch-presentation img {
         width: 100%;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        padding-bottom: 1em;
+    }
+    
+    .contact form {
+    
+    }     
+    .contact > img {
+        width: 100%;
+        /* visibility: hidden;
+        height: 0px;
+        width: 0px; */
     }
 }
