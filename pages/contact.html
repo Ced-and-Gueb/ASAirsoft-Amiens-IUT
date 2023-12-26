@@ -25,29 +25,24 @@
         <section class="contact">
             <img src="https://cdn.discordapp.com/attachments/776506403292315657/1161327917691842610/image0.jpg?ex=6537e5e8&is=652570e8&hm=481e7069b2c4225642898860cebd1c00a5a452d317abebc7cb04f8f16be3936e&"
                 alt="">
-            <form action="contact.html" method="post">
-                <div>
-                    <h6>E-mail :</h6>
-                    <input type="email" name="email" placeholder="exemple@exemple.com">
+            <form>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Adresse e-mail:</label>
+                    <input type="email" class="form-control" id="email">
                 </div>
-                <div>
-                    <h6>Prénom :</h6>
-                    <input type="text" name="forename" placeholder="Enter votre prénom">
+                <div class="mb-3">
+                    <label for="first_name" class="form-label">Prénom:</label>
+                    <input type="text" class="form-control" id="first_name">
                 </div>
-                <div>
-                    <h6>Nom :</h6>
-                    <input type="text" name="surname" placeholder="Entrer votre nom">
+                <div class="mb-3">
+                    <label for="last_name" class="form-label">Nom de famille:</label>
+                    <input type="text" class="form-control" id="last_name">
                 </div>
-                <div>
-                    <h6>Number :</h6>
-                    <input type="number" name="number">
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="actus_check">
+                    <label class="form-check-label" for="actus_check">Recevoir nos actualités</label>
                 </div>
-                <div>
-                    <h6>Recevoir nos actualités :</h6>
-                    <input type="checkbox">
-                </div>
-                <br>
-                <button type="submit">valider</button>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
             </form>
         </section>
     </main>
