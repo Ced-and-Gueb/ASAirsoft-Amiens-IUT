@@ -300,6 +300,7 @@ footer > h3 {
   header {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     font-size: var(--fs-small-medium);
     height: fit-content;
     padding-left: 0.2em;
@@ -307,6 +308,7 @@ footer > h3 {
   }
   header > nav {
     display: flex;
+    flex-direction: column;
     font-size: var(--fs-small-medium);
     padding: 1em;
   }
