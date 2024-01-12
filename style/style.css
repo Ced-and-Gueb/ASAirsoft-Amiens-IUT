@@ -308,8 +308,8 @@ footer > h3 {
     padding: 0.5em;
   }
   header > nav {
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     font-size: var(--fs-small-medium);
     padding: 0.5em;
   }
